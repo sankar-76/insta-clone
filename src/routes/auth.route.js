@@ -1,0 +1,21 @@
+const express = require('express');
+const userModel = require('../models/user.model');
+
+const authRouter = express.Router
+
+authRouter.post('/register',async(req,res)=> {
+  const {email,username, password,bio, profileImag} = req.body
+
+  const isUserExistsByEmail = await userModel.findOne({email})
+    if (isUserExistsByEmail) {
+      return res.status(409).json({
+        message:"User already exists with same email"
+      })
+    }
+    const isUserExistsByUsername = await userModel.findOne({username})
+    if(isUserExistsByUsername){
+      return res.status(409).json({
+        message:"user alredy exists by username"
+      })
+    }
+})
