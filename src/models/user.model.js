@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 
+ 
 const userSchema = new mongoose.Schema({
     username: {
       type:"string",
@@ -19,8 +20,8 @@ const userSchema = new mongoose.Schema({
       type:String,
       default:"https://ik.imagekit.io/oqbdprtxx/profile.webp"
     }
-})
-
-const userModel = mongoose.model("user",userSchema)
+  })
+  
+  const userModel = mongoose.model("user",userSchema)
 
 module.exports = userModel
