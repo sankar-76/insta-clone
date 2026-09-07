@@ -11,7 +11,6 @@ authRouter.post('/register',authController.registeredController)
 
   /***
    * username and
-   * password
    * 
    * gamil and 
    * password

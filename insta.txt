@@ -22,3 +22,11 @@
     bio:String,
     profile_image:String
   }
+
+
+  {
+    caption:String,
+    img_url:String,
+    UserId,
+    createdAt:Date-time
+  }
