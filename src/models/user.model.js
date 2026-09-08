@@ -19,7 +19,19 @@ const userSchema = new mongoose.Schema({
     profileImage:{
       type:String,
       default:"https://ik.imagekit.io/oqbdprtxx/profile.webp"
-    }
+    },
+    /*   */
+    followers: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users"
+    }],
+    following : [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users"
+    }],
+    posts : [{
+
+    }]
   })
   
   const userModel = mongoose.model("user",userSchema)
